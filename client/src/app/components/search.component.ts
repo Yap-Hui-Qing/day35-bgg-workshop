@@ -26,6 +26,11 @@ export class SearchComponent implements OnInit {
     this.form = this.fb.group({
       q: this.fb.control<string>('', [ Validators.required ])
     })
+
+    const storedResults = this.bggSvc.getResults();
+    if (storedResults.length > 0) {
+      this.searchResults = storedResults;
+    }
   }
 
   search() {

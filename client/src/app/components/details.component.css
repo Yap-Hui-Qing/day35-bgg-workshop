@@ -41,15 +41,7 @@ img {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.back-button {
-    display: inline-block;
-    margin-bottom: 15px;
-    padding: 8px 15px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+.button-class {
+    display: flex;
+    gap: 10px
 }
