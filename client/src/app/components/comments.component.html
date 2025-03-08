@@ -1,0 +1,30 @@
+<h2>Game Comments</h2>
+
+<div>
+    <button type="button" [routerLink]="['/']">Back</button>
+</div>
+
+<hr>
+
+<div>
+    @if (comments$ | async; as comments){
+        @for (c of comments; track $index){
+        <table border="1">
+            <tr>
+                <td>User:</td>
+                <td> {{ c.user }}</td>
+            </tr>
+            <tr>
+                <td>Rating:</td>
+                <td> {{ c.rating }}</td>
+            </tr>
+            <tr>
+                <td>Text:</td>
+                <td> {{ c.c_text }}</td>
+            </tr>
+        </table>
+        } @empty {
+            <h2>No comments found for this game</h2>
+        }
+    }
+</div>

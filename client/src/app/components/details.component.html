@@ -1,0 +1,35 @@
+<h2>Game Id: <code>{{ gid }}</code></h2>
+
+<div class="button-class">
+    <button type="button" (click)="goBack()">← Back</button>
+    <button type="button" (click)="showComments(gid)">Go</button>
+</div>
+
+<table class="game-table">
+    <tr>
+        <td>Name:</td>
+        <td><code>{{ result.name }}</code></td>
+    </tr>
+    <tr>
+        <td>Year:</td>
+        <td><code>{{ result.year }}</code></td>
+    </tr>
+    <tr>
+        <td>Ranking:</td>
+        <td><code>{{ result.ranking }}</code></td>
+    </tr>
+    <tr>
+        <td>User Rating:</td>
+        <td><code>{{ result.users_rated }}</code></td>
+    </tr>
+    <tr>
+        <td>Link:</td>
+        <td><a [href]="result.url" target="_blank">{{ result.url }}</a></td>
+    </tr>
+    <tr>
+        <td colspan="2" class="image-cell">
+            <img [src]="result.image" alt="Game Image">
+        </td>
+    </tr>
+</table>
+
